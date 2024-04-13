@@ -1,6 +1,6 @@
 
-
 import java.util.ArrayList;
+
 
 public class Livraria {
 
@@ -21,4 +21,15 @@ public class Livraria {
         }
         return listaLivros;
        } 
+       public String detalharLivroPorId(int id){
+        String detalheLivro = "Livro não encontrado.\n";
+
+        for (Livro livro : livros){
+            if (livro.id == id){
+                detalheLivro = livro.toString();
+            }
+        }
+
+        return detalheLivro;
+       }
     }
